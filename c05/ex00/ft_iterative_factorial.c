@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 11:08:02 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/02 11:10:27 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/15 20:45:27 by marvin            #+#    #+#             */
+/*   Updated: 2024/03/15 20:45:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	rush(int x, int y);
-
-int	main(void)
+int ft_iterative_factorial(int nb)
 {
-	rush (40, 20);
-	return (0);
+    int i;
+    int resultado;
+
+    i = 1;
+    resultado = 1;
+    while (i <= nb)
+    {
+        resultado = resultado * i;
+        i++;
+    }
+    return (resultado);
 }
