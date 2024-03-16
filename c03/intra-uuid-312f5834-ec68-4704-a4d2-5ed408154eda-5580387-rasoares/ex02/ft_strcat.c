@@ -1,33 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 11:43:02 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/15 11:43:08 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/12 12:29:09 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/12 12:29:14 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
-int	main(int argc, char **argv)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	j;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			write (1, &argv[i][j], 1);
-			j++;
-		}
-		write (1, "\n", 1);
 		i++;
 	}
-	return (0);
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }
+/*
+int main(void)
+{
+	char s1[] = "pirate gdvghdgfjdhg";
+	char *s_ptr;
+	char s2[10] = "jshf";
+	char *s_ptr2;
+	
+	s_ptr = s1;
+	s_ptr2 = s2;
+	
+	printf("%s", ft_strcat(s_ptr, s_ptr2));
+}
+*/

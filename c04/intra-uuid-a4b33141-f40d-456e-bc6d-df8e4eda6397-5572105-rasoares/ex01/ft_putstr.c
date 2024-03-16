@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 11:43:02 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/15 11:43:08 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/14 15:18:53 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/14 15:18:55 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+void	ft_putstr(char *str)
 {
 	int	i;
-	int	j;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			write (1, &argv[i][j], 1);
-			j++;
-		}
-		write (1, "\n", 1);
+		write (1, &str[i], 1);
 		i++;
 	}
-	return (0);
 }
+/*
+int main()
+{
+    char *message = "Hello, world!";
+    ft_putstr(message);
+    return 0;
+}
+*/	

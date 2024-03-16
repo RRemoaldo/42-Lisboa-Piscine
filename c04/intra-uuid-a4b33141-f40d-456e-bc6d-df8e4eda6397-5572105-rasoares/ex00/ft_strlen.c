@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 11:43:02 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/15 11:43:08 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/14 15:01:39 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/14 15:01:45 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	ft_strlen(char *str)
 {
 	int	i;
-	int	j;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			write (1, &argv[i][j], 1);
-			j++;
-		}
-		write (1, "\n", 1);
 		i++;
 	}
-	return (0);
+	return (i);
 }
+/*
+int main()
+{
+    char str[] = "Hello, world!";
+    int length = ft_strlen(str);
+    printf("Length of the string: %d\n", length);
+    return 0;
+}
+*/

@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 19:52:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/03/15 19:52:26 by marvin           ###   ########.fr       */
+/*   Created: 2024/03/15 12:35:03 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/15 12:35:05 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    int i;
+	int	i;
+	int	j;
 
-    i = argc - 1;
-    while (i > 0)
-    {
-        int j;
-
-        j = 0;
-        while(argv[i][j] != '\0')
-        {
-            write (1, &argv[i][j], 1);
-            j++;
-        }
-        i--;
-        write(1, "\n", 1);
-    }
+	i = argc - 1;
+	while (i > 0)
+	{
+		j = 0;
+		while (argv[i][j] != '\0' && argc)
+		{
+			write (1, &argv[i][j], 1);
+			j++;
+		}
+		write (1, "\n", 1);
+		i--;
+	}
+	return (0);
 }

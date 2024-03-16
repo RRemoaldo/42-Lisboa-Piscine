@@ -3,24 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 18:03:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/03/15 18:03:37 by marvin           ###   ########.fr       */
+/*   Created: 2024/03/15 11:14:21 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/15 11:14:26 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    (void)argc;
-    while (argv[0][i] != 0)
-    {
-        write (1, &argv[0][i], 1);
-        i++;
-    }
+	i = 0;
+	argc = 0;
+	while (argv[0][i] != '\0')
+	{
+		write (1, &argv[0][i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
+	return (0);
 }
