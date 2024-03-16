@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 23:48:35 by marvin            #+#    #+#             */
-/*   Updated: 2024/03/11 23:48:35 by marvin           ###   ########.fr       */
+/*   Created: 2024/03/12 11:15:30 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/12 11:15:38 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s1[i] = s2[i])
-    {
-        i++;
-    }
-    return (s1[i] - s2[i]);
+	i = 0;
+	while (s2[i] != '\0' && s1[i] != '\0' && (s1[i] == s2[i]))
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 12:29:09 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/12 12:29:14 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/12 15:34:58 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/12 15:35:01 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	j = 0;
@@ -24,7 +24,7 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < nb)
 	{
 		dest[i + j] = src[j];
 		j++;
@@ -35,7 +35,7 @@ char	*ft_strcat(char *dest, char *src)
 /*
 int main(void)
 {
-	char s1[] = "pirate gdvghdgfjdhg";
+	char s1[] = "pirate ";
 	char *s_ptr;
 	char s2[10] = "jshf";
 	char *s_ptr2;
@@ -43,6 +43,6 @@ int main(void)
 	s_ptr = s1;
 	s_ptr2 = s2;
 	
-	printf("%s", ft_strcat(s_ptr, s_ptr2));
+	printf("%s", ft_strncat(s_ptr, s_ptr2, 0));
 }
 */
