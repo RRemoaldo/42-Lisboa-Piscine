@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 11:08:02 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/02 11:10:27 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/14 15:01:39 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/14 15:01:45 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <stdio.h>
 
-void	rush(int x, int y);
-
-int	main(void)
+int	ft_strlen(char *str)
 {
-	rush (0, 4);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
+/*
+int main()
+{
+    char str[] = "Hello, world!";
+    int length = ft_strlen(str);
+    printf("Length of the string: %d\n", length);
+    return 0;
+}
+*/
