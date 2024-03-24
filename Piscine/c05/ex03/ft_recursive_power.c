@@ -23,12 +23,12 @@ int ft_recursive_power(int nb, int power)
     {
         return(1);
     }
-    while (power > 0)
+    while (power > 1)
     {
         return(nb * ft_recursive_power (nb, (power - 1)));
     }
 }
-/*
+
 #include <stdio.h>
 
 int ft_recursive_power(int nb, int power);
@@ -37,4 +37,4 @@ int main()
 {
 	printf("%i", ft_recursive_power(3,2));
 }
-*/
+

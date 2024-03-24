@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/02 11:08:02 by rasoares          #+#    #+#             */
-/*   Updated: 2024/03/02 11:10:27 by rasoares         ###   ########.fr       */
+/*   Created: 2024/03/14 15:18:53 by rasoares          #+#    #+#             */
+/*   Updated: 2024/03/14 15:18:55 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	rush(int x, int y);
-
-int	main(void)
+void	ft_putstr(char *str)
 {
-	rush (0, 4);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write (1, &str[i], 1);
+		i++;
+	}
 }
+/*
+int main()
+{
+    char *message = "Hello, world!";
+    ft_putstr(message);
+    return 0;
+}
+*/	
