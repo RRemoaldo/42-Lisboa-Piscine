@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:17:45 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/22 21:58:01 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/04/29 11:34:05 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,32 +32,30 @@ static int	ft_len(long n)
 	return (len);
 }
 
-
 char	*ft_itoa(int n)
 {
-	char *result;
-	int len;
+	char		*result;
+	int			len;
+	long int	negnum;
 
-	len = 0;
+	negnum = n;
 	len = ft_len(n);
 	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
-	if (n < 0)
+	else if (negnum < 0)
 	{
-		n *= -1;
+		negnum *= -1;
 		result[0] = '-';
 	}
-	if (n == 0)
-	{
+	else if (negnum == 0)
 		result[0] = '0';
-	}
 	result[len] = '\0';
-	while (n > 0)
+	while (negnum > 0)
 	{
 		len--;
-		result[len] = (n % 10) + '0';
-		n /= 10;
+		result[len] = (negnum % 10) + '0';
+		negnum /= 10;
 	}
 	return (result);
 }
@@ -67,13 +65,13 @@ char	*ft_itoa(int n)
 #include <stdlib.h>
 
 // Function prototypes
-static int	ft_len(int n);
+static int	ft_len(long int n);
 char		*ft_itoa(int n);
 
 int main() {
     // Test cases
-    int num1 = 1234;
-    int num2 = -5678;
+    int num1 = 10;
+    int num2 = -2147483648;
     int num3 = 0;
 
     // Test ft_itoa function
@@ -86,10 +84,6 @@ int main() {
     printf("Integer: %d, String: %s\n", num2, str2);
     printf("Integer: %d, String: %s\n", num3, str3);
 
-    // Free memory
-    free(str1);
-    free(str2);
-    free(str3);
 
     return 0;
 }

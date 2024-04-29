@@ -33,6 +33,16 @@ Files = ft_atoi \
 	ft_itoa \
 	ft_split
 
+BONUS = ft_lstnew \
+	ft_lstadd_front \
+	ft_lstsize \
+	ft_lstlast \
+	ft_lstadd_back \
+	ft_lstdelone \
+	ft_lstclear \
+	ft_lstiter \
+	ft_lstmap
+
 COMPILER = cc
 
 FLAGS = -Wall -Wextra -Werror
@@ -41,12 +51,19 @@ SRCFILES = $(Files:%=%.c)
 
 OBJFILES = $(Files:%=%.o)
 
+BONUS_SRC = $(BONUS:%=%.c)
+
+BONUS_OBJ = $(BONUS:%=%.c)
+
 NAME = libft.a
+
+all: $(NAME)
 
 $(NAME): $(OBJFILES)
 	ar rcs $(NAME) $(OBJFILES)
 
-all: $(NAME)
+$(BONUS_OBJ): %.o: %.c
+	$(COMPILER) $(FLAGS) -c $< -o $@
 
 $(OBJFILES): %.o: %.c
 	$(COMPILER) $(FLAGS) -c $< -o $@
@@ -58,3 +75,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(BONUS_OBJ)
+	ar rcs $(BONUS_OBJ)

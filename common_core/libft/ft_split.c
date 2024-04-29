@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:17:37 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/22 21:05:09 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/04/29 11:32:32 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,36 @@ static int	word_count(char const *s, char c)
 
 	wc = 0;
 	i = 0;
-
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
-			i++;
 		if (s[i] != c)
+		{
 			wc++;
-		while (s[i] != c && s[i])
-			i++;
+			while (s[i] != c && s[i])
+				i++;
+		}
+		else
+		{
+			while (s[i] == c && s[i])
+				i++;
+		}
 	}
-	return wc;
+	return (wc);
 }
 
-char	*subword(char const *s, int start, int len)
+int	check_memory(char **split, int j)
 {
-	char	*sub;
-	int		i;
-
-	i = 0;
-	sub = malloc(sizeof(char) * (len + 1));
-	if (!sub)
-		return (NULL);
-	while (start < len)
+	if (split[j] == NULL)
 	{
-		sub[i] = s[start];
-		i++;
-		start++;
+		while (j >= 0)
+		{
+			free(split[j]);
+			j--;
+		}
+		free (split);
+		return (0);
 	}
-	sub[i] = '\0';
-	return (sub);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -58,27 +58,55 @@ char	**ft_split(char const *s, char c)
 	int		start;
 	int		j;
 
-	split = malloc(sizeof(char *) * word_count(s, c));
-	if (!split || !s)
+	split = malloc(sizeof(char *) * (word_count(s, c) + 1));
+	if (!split || s == NULL)
 		return (NULL);
-	start = -1;
 	i = 0;
 	j = 0;
 	while (s[i])
 	{
-		if (s[i] != c && start < 0)
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i] != c && s[i])
 		{
 			start = i;
-		}
-		else if (s[i] == c && start >= 0)
-		{
-			split[j] = subword(s, start, i);
+			while (s[i] != c && s[i])
+				i++;
+			split[j] = ft_substr(s, start, i - start);
+			if (!check_memory(split, j))
+				return (NULL);
 			j++;
-			start = -1;
 		}
-		i++;
 	}
 	split[j] = NULL;
-
 	return (split);
 }
+
+/*
+#include "libft.h"
+
+int main(void) {
+    char const *str = NULL;
+    char **split = ft_split(str, 'z');
+
+    if (!split) {
+        printf("Erro ao dividir a string.\n");
+        return 1;
+    }
+
+    // Imprime as palavras divididas
+    for (int i = 0; split[i] != NULL; i++) {
+        printf("Palavra %d: %s\n", i + 1, split[i]);
+    }
+
+    // Libera a memória alocada para cada palavra
+    for (int i = 0; split[i] != NULL; i++) {
+        free(split[i]);
+    }
+
+    // Libera a memória alocada para o array de strings
+    free(split);
+
+    return 0;
+}
+*/
