@@ -40,8 +40,7 @@ BONUS = ft_lstnew \
 	ft_lstadd_back \
 	ft_lstdelone \
 	ft_lstclear \
-	ft_lstiter \
-	ft_lstmap
+	ft_lstiter
 
 COMPILER = cc
 
@@ -53,7 +52,7 @@ OBJFILES = $(Files:%=%.o)
 
 BONUS_SRC = $(BONUS:%=%.c)
 
-BONUS_OBJ = $(BONUS:%=%.c)
+BONUS_OBJ = $(BONUS:%=%.o)
 
 NAME = libft.a
 
@@ -68,13 +67,13 @@ $(BONUS_OBJ): %.o: %.c
 $(OBJFILES): %.o: %.c
 	$(COMPILER) $(FLAGS) -c $< -o $@
 
+bonus: $(BONUS_OBJ)
+	ar rcs $(NAME) $(BONUS_OBJ)
+
 clean:
-	rm -f $(OBJFILES)
+	rm -f $(OBJFILES) $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-bonus: $(BONUS_OBJ)
-	ar rcs $(BONUS_OBJ)
