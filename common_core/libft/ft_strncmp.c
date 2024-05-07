@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:14:34 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/29 17:30:16 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:50:57 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return (0);
 }
+/*
+int	main()
+{
+	printf("%d\n", ft_strncmp("OLA amigos", "OLA Amigos", 5));
+}*/

@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:16:41 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:54:27 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:49:12 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,22 @@ char	*ft_strdup(const char *s)
 	new[i] = '\0';
 	return (new);
 }
+/*int main()
+{
+	const char *original = "Hello, world!";
+	char *copied;
+
+	copied = ft_strdup(original);
+
+	if (copied != NULL)
+	{
+		printf("String original: %s\n", original);
+		printf("String duplicada: %s\n", copied);
+		free(copied);
+	}
+	else
+	{
+		printf("Erro: falha ao duplicar a string.\n");
+	}
+	return (0);
+}*/

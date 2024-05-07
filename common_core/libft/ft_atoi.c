@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:15:41 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:52:45 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:40:53 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,8 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+/*int	main()
+{
+	printf("%d\n", ft_atoi("          "));
+}*/

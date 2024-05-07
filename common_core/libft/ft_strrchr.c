@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:14:15 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/29 11:57:57 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:51:14 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,22 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (0);
 }
+/*
+int	main()
+{
+	const char *str = "Hello, world!";
+	int search_char = 'o';
+	char *result = ft_strrchr(str, search_char);
+
+	if (result != NULL)
+	{
+		printf("Última ocorrência de '%c' em '%s' encontrada em: %ld\n", 
+		search_char, str, result - str);
+	}
+	else
+	{
+		printf("Caractere '%c' não encontrado em '%s'\n", search_char, str);
+	}
+	return (0);
+}
+*/

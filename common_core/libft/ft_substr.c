@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:16:54 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/29 17:29:53 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:51:29 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(new, s + start, finish + 1);
 	return (new);
 }
+/*int main()
+{
+	const char	*string_original = "OlA o MEU nome e Joao";
+	unsigned int	inicio = 8;
+	size_t	comprimento = 6;
+	char	*substring = ft_substr(string_original, inicio, comprimento);
+	
+	printf("%s\n", substring);
+	free(substring);
+	return (0);
+}*/

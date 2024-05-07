@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:15:25 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:52:34 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:51:07 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,14 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	}
 	return (0);
 }
+/*
+int	main()
+{
+	const char	*str = "os dentes caem quando o paulinho marca";
+	const char	*find = "caem";
+    size_t  n = 13;
+    char    *result= ft_strnstr(str, find, n);
+
+	printf("%s\n", result);
+    return (0);
+}*/

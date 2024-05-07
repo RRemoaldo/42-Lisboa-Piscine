@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:12:09 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:47:42 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:40:50 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,13 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
+
+/*int	main()
+{
+	char	buffer[10];
+	strcpy(buffer, "abcdefg");
+	printf("Antes do ft_bzero : %s\n", buffer);
+	ft_bzero(buffer, sizeof(buffer));
+	printf("Depois do ft_bzero: %s\n", buffer);
+	return (0);
+}*/

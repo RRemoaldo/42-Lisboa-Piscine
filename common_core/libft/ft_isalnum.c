@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 12:41:20 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:28:17 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:41:13 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,9 @@ int	ft_isalnum(int i)
 		return (1);
 	return (0);
 }
-/*#include <stdio.h>
-int	main()
+/*int	main()
 {
 	char i = '1';
 	printf("%d\n", ft_isalnum(i));
 	return(0);
 }*/
-/*
-Objetivo: Esta função verifica se a variavel i é alpha ou numerica
-*/
