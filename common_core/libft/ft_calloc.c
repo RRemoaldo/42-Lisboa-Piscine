@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:16:00 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/29 11:17:25 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:40:48 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,19 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(dest, (nmemb * size));
 	return (dest);
 }
+
+/*
+int	main()
+{
+	int *array = (int *)ft_calloc(5, sizeof(int));
+
+	if (array == NULL)
+	{
+		printf("Erro: Falha ao alocar memória.\n");
+		return 1;
+	}
+	free(array);
+
+    return (0);
+}
+*/

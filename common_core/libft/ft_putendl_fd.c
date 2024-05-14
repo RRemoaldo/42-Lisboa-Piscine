@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:18:50 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/22 15:31:57 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:48:30 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,8 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write (fd, "\n", 1);
 }
+/*
+int	main()
+{
+	ft_putendl_fd("ola", 1);
+}*/

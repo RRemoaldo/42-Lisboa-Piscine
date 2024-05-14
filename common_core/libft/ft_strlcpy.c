@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:13:07 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:49:58 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:50:26 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	return (i);
 }
+/*#include <stdio.h>
+int	main()
+{
+	char	src[] = "Ola amigos";
+	char	dest[] = "muito bem";
+	printf("%d\n%s\n", ft_strlcpy(dest, src, 8), dest);
+}*/

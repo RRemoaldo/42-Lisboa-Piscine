@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:18:40 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/22 15:31:48 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:48:43 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,8 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/*
+int	main()
+{
+	ft_putstr_fd("ola,meus amigos", 1);
+}*/

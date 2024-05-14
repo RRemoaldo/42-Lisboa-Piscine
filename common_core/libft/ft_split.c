@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:17:37 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/29 11:32:32 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:51:09 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,6 @@ char	**ft_split(char const *s, char c)
 			while (s[i] != c && s[i])
 				i++;
 			split[j] = ft_substr(s, start, i - start);
-			if (!check_memory(split, j))
-				return (NULL);
 			j++;
 		}
 	}
@@ -93,18 +91,12 @@ int main(void) {
         printf("Erro ao dividir a string.\n");
         return 1;
     }
-
-    // Imprime as palavras divididas
     for (int i = 0; split[i] != NULL; i++) {
         printf("Palavra %d: %s\n", i + 1, split[i]);
     }
-
-    // Libera a memória alocada para cada palavra
     for (int i = 0; split[i] != NULL; i++) {
         free(split[i]);
     }
-
-    // Libera a memória alocada para o array de strings
     free(split);
 
     return 0;

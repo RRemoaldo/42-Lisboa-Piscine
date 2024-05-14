@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:19:54 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/22 15:32:03 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:48:37 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,8 @@ void	ft_putnbr_fd(int n, int fd)
 		}
 	}
 }
+/*
+int	main()
+{
+	ft_putnbr_fd(32, 1);
+}*/

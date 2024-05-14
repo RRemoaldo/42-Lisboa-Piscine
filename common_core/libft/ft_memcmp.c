@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:14:59 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:52:23 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:47:18 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,9 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
+/*#include <stdio.h>
+int	main()
+{
+	printf("%d\n", ft_memcmp("hEllo", "hello", 2));
+	return(0);
+}*/

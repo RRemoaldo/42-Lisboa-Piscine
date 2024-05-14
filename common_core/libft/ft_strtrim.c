@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:17:20 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/19 14:36:11 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:51:22 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (new);
 }
+/*
+int	main() 
+{
+	char *s1 = "   hello world   ";
+	char *set = " ";
+	char *trimmed_str = ft_strtrim(s1, set);
+
+	printf("String original: \"%s\"\n", s1);
+	printf("String após remoção de espaços em branco: \"%s\"\n", trimmed_str);
+	free(trimmed_str);
+	return (0);
+}
+*/

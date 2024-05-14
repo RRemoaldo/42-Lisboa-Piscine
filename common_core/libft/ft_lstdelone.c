@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 16:12:09 by rasoares          #+#    #+#             */
-/*   Updated: 2024/05/07 17:40:50 by rasoares         ###   ########.fr       */
+/*   Created: 2024/05/06 13:05:29 by rasoares          #+#    #+#             */
+/*   Updated: 2024/05/07 17:46:04 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	unsigned char	*p;
-
-	p = s;
-	while (n > 0)
-	{
-		*p = 0;
-		p++;
-		n--;
-	}
+	if (!del || !lst)
+		return ;
+	del(lst->content);
+	free(lst);
 }
-
-/*int	main()
+/*void	dele(void *data)
 {
-	char	buffer[10];
-	strcpy(buffer, "abcdefg");
-	printf("Antes do ft_bzero : %s\n", buffer);
-	ft_bzero(buffer, sizeof(buffer));
-	printf("Depois do ft_bzero: %s\n", buffer);
+	free(data);
+}
+int main()
+{
+	int	*data = malloc(sizeof(int));
+	*data = 42;
+
+	t_list *node = malloc(sizeof(t_list));
+	node->content = data;
+	node->next = NULL;
+
+	ft_lstdelone(node, dele);
+
+	if (node == NULL)
+		printf("Node deletado com sucesso!\n");
+	else
+		printf("Falha ao deletar o node.\n");
 	return (0);
 }*/

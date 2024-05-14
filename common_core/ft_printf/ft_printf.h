@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 16:12:48 by rasoares          #+#    #+#             */
-/*   Updated: 2024/05/06 16:07:32 by rasoares         ###   ########.fr       */
+/*   Created: 2024/05/08 14:13:53 by rasoares          #+#    #+#             */
+/*   Updated: 2024/05/08 14:26:03 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	size_t		i;
+# include <stdarg.h>
+# include "libft/libft.h"
 
-	i = 0;
-	if (dest == NULL && src == NULL)
-		return (NULL);
-	if (dest < src)
-	{
-		while (i < n)
-		{
-			((char *)dest)[i] = ((char *)src)[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			((char *)dest)[i - 1] = ((char *)src)[i - 1];
-			i--;
-		}
-	}
-	return (dest);
-}
+int		ft_printf(const char *str, ...);
+void	ft_printchar(int c, long int *len);
+void	ft_printstr(char *str, long int *len);
+void	ft_printnum(long int num, long int *len);
+void	ft_print_hex(unsigned int num, int is_upper, long int *len);
+void	ft_printptr(unsigned long int ptr, long int *len);
+
+#endif

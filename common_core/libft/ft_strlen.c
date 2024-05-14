@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 15:21:35 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 12:33:13 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:50:36 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,3 @@ int	main()
 {
 	printf("%d\n", ft_strlen("ola"));
 }*/
-/*
-Objetivo: Contar o comprimento de uma str
-*/

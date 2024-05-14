@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:17:45 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/29 11:34:05 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:45:02 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,31 +60,24 @@ char	*ft_itoa(int n)
 	return (result);
 }
 
-/*
-#include <stdio.h>
-#include <stdlib.h>
+/*int main()
+{
+	int test_cases[] = {0, 123, -456, 7890, -12345};
+	int num_cases = sizeof(test_cases) / sizeof(test_cases[0]);
 
-// Function prototypes
-static int	ft_len(long int n);
-char		*ft_itoa(int n);
+	printf("Testing ft_itoa function:\n");
+	for (int i = 0; i < num_cases; i++)
+	{
+		int num = test_cases[i];
+		char *result = ft_itoa(num);
+		if (result == NULL) 
+		{
+			printf("Memory allocation failed for test case %d\n", num);
+			continue;
+		}
+		printf("Number: %d, Result: %s\n", num, result);
+		free(result);
+	}
 
-int main() {
-    // Test cases
-    int num1 = 10;
-    int num2 = -2147483648;
-    int num3 = 0;
-
-    // Test ft_itoa function
-    char *str1 = ft_itoa(num1);
-    char *str2 = ft_itoa(num2);
-    char *str3 = ft_itoa(num3);
-
-    // Print results
-    printf("Integer: %d, String: %s\n", num1, str1);
-    printf("Integer: %d, String: %s\n", num2, str2);
-    printf("Integer: %d, String: %s\n", num3, str3);
-
-
-    return 0;
-}
-*/
+	return (0);
+}*/

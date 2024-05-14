@@ -6,7 +6,7 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:17:06 by rasoares          #+#    #+#             */
-/*   Updated: 2024/04/18 13:30:08 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:50:12 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[x] = '\0';
 	return (new);
 }
+/*int	main()
+{
+    const char *s1 = "Hello, ";
+    const char *s2 = "world!";
+    char *result = ft_strjoin(s1, s2);
+
+    if (result == NULL)
+    {
+        printf("Erro: erro\n");
+        return 1;
+    }
+    printf("Strings concatenadas: %s\n", result);
+    free(result);
+    return 0;
+}*/

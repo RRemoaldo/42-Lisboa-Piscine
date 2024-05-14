@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 16:12:48 by rasoares          #+#    #+#             */
-/*   Updated: 2024/05/06 16:07:32 by rasoares         ###   ########.fr       */
+/*   Created: 2024/04/29 16:34:58 by rasoares          #+#    #+#             */
+/*   Updated: 2024/05/07 17:45:40 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t		i;
-
-	i = 0;
-	if (dest == NULL && src == NULL)
-		return (NULL);
-	if (dest < src)
-	{
-		while (i < n)
-		{
-			((char *)dest)[i] = ((char *)src)[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			((char *)dest)[i - 1] = ((char *)src)[i - 1];
-			i--;
-		}
-	}
-	return (dest);
+	new->next = *lst;
+	*lst = new;
 }
+/*int	main()
+{
+	t_list	*node1;
+	t_list	*node2;
+	t_list	*current;
+
+	node1 = ft_lstnew("alo");
+	node2 = ft_lstnew("ola");
+	ft_lstadd_front(&node2, node1);
+
+	current = node1;
+	while (current)
+	{
+		printf("%s\n", (char *)current->content);
+		current = current->next;
+	}
+	free(node1);
+	free(node2);
+	return (0);
+}*/
