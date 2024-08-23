@@ -6,9 +6,11 @@
 /*   By: rasoares <rasoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 14:13:51 by rasoares          #+#    #+#             */
-/*   Updated: 2024/05/08 16:33:24 by rasoares         ###   ########.fr       */
+/*   Updated: 2024/05/21 11:19:02 by rasoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 void	ft_printchar (int c, long int *len)
 {
@@ -21,6 +23,7 @@ void	ft_printstr(char *str, long int *len)
 	if (!str)
 	{
 		ft_printstr("(null)", len);
+		return ;
 	}
 	while(*str)
 	{
@@ -34,7 +37,7 @@ void	ft_printnum(long int num, long int *len)
 	if (num < 0)
 	{
 		ft_printchar('-', len);
-		num *= -num;
+		num = -num;
 	}
 	if (num > 9)
 		ft_printnum(num / 10, len);
